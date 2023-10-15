@@ -1,0 +1,146 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica;
+    box-sizing: border-box;
+}
+.freeShipping
+{
+    padding: 10x 30px;
+    width: 100%;
+    background: black;
+    display: flex;
+}
+.freeShipping .truckIcon
+{
+    color: white;
+    font-size: 32px;
+}
+.freeShipping p
+{
+    margin-left: 10px;
+    color: white;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+
+.mainHeader
+{
+    padding: 30px 40px;
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+.mainHeader .container
+{
+    display: flex;
+    justify-content: space-between;
+
+}
+.mainHeader .container .search_box
+{
+    margin-right: 30px;
+}
+.mainHeader .container .search_box input
+{
+    outline: none;
+    padding: 10px 30px;
+    border: 3px solid pink;
+    width: 300px;
+    color: #010f1c;
+}
+.mainHeader .container .search_box button
+{
+    border: 3px solid pink;
+    outline: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: pink;
+    color: white;
+}
+.mainHeader .container .icon
+{
+    display: flex;
+    margin-right: 50px;
+}
+.mainHeader .container .icon .account 
+{
+    display: flex;
+    margin-right: 30px;
+}
+.mainHeader .container .icon .account .user_icon
+{
+    margin-right: 10px;
+    font-size: 22px;
+    color: black;
+    cursor: pointer;
+}
+.mainHeader .container .icon .account p
+{
+    margin-right: 5px;
+    margin-top: 2px;
+}
+.mainHeader .container .icon .second_icon
+{
+    display: flex;
+    margin-left: 35px;
+}
+.mainHeader .container .icon .second_icon .link
+{
+    margin-right: 5px;
+    font-size: 22px;
+    cursor: pointer;
+    color: pink;
+}
+
+
+
+.header
+{
+    width: 100%;
+    padding: 20px 30px;
+    box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
+}
+.header .container
+{
+    display: flex;
+    max-width: 100%;
+    justify-content: space-between;
+}
+.header .container .navig ul
+{
+    display: flex;
+}
+.header .container .navig ul li
+{
+    margin-left: 20px;
+    list-style: none;
+}
+.header .container .navig ul li .link
+{
+    text-decoration: none;
+    color: black;
+    transition: 0.5s;
+}
+.header .container .navig ul li .link.hover
+{
+    color: pink;
+}
+.header .container .auth
+{
+    margin-right: 20px;
+    font-size: 22px;
+    cursor: pointer;
+}
+.header .container .auth button
+{
+    margin-right: 20px;
+    font-size: 22px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: none;
+}
