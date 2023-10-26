@@ -4,6 +4,9 @@ import Home from './home'
 import Product from './product'
 import Cart from './cart'
 import Checkout from './checkout'
+import Registration from './registration'
+import Login from './login'
+
 const Rout = ({product, setProduct, detail, view, close, setClose, cart, setCart, addtocart}) => {
   return (
     <>
@@ -12,6 +15,8 @@ const Rout = ({product, setProduct, detail, view, close, setClose, cart, setCart
         <Route path='/product' element={<Product product={product} setProduct={setProduct} detail={detail} view={view} close={close} setClose={setClose} addtocart={addtocart}/>} />
         <Route path='/cart' element={<Cart cart={cart} setCart={setCart} />} />
         <Route path='/checkout' element={<Checkout />} />
+        <Route path='/registration' element={<Registration />} />
+        <Route path='/login' element={<Login />} />
     </Routes>
     </>
   )

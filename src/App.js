@@ -4,6 +4,7 @@ import Rout from './rout';
 import {BrowserRouter} from 'react-router-dom';
 import Footer from './footer';
 import Productdetail from './productdetail';
+
 const App = () => {
   // add to cart
   const [cart, setCart] = useState([])
