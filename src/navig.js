@@ -7,23 +7,22 @@ import { CiLogout } from 'react-icons/ci';
 import { Link } from 'react-router-dom';
 import './navig.css'
 import { useState } from 'react'
+import { useEmail, EmailProvider, useEmailValue } from './EmailContext';
+import { useAuth } from './AuthContext';
+import Login from './login'
 
 const Navig = ({searchbtn}) => {
     const [search, setSearch] = useState()
-    const { user, isAuthenticated} = useState();
 
-    const loginWithRedirect = () => {
-        window.location.href = '/login'; 
-      };
-
-      const logout = () => {
-        const returnTo = window.location.origin;
-        window.location.href = returnTo;
-      };
+    const { isAuthenticated, setAuthenticationStatus } = useAuth();
+    const { email } = useEmail();
 
   return (
     <>
-
+    <div className='login-container'> {/* Apply a CSS class */}
+        <Login email={email} />
+    </div>
+    
     <div className='freeShipping'>
             <div className='truckIcon'>
             <FaShippingFast/>
@@ -32,8 +31,8 @@ const Navig = ({searchbtn}) => {
     </div>
 
 
-
-    <div className="mainHeader">
+    <EmailProvider>  
+    <div className="mainHeader"> 
         <div className='container'>
             <div className='logo'>
                 <img src='./img/logo.svg' alt='logo'></img>
@@ -42,15 +41,15 @@ const Navig = ({searchbtn}) => {
                 <input type='text' value={search} placeholder='Search the name of a product...' autoComplete='off' onChange={(e) => setSearch(e.target.value)}></input>
                 <button onClick={() => searchbtn (search)}>Search</button>
             </div>
-            <div className='icon'>
+            <div className='icon'>                
                 {
                     isAuthenticated &&
                     (
                         <div className='account'>
-                            <div className='user_icon'>
+                            <div className='user_icon'>                      
                                 <AiOutlineUser/>
                             </div> 
-                            <p>Hello, {user.name}!</p> 
+                            <p>Hello, {email}!</p> 
                         </div>   
                     )
                 }                    
@@ -60,6 +59,7 @@ const Navig = ({searchbtn}) => {
             </div>
         </div>
     </div>
+    </EmailProvider>  
 
 
 
@@ -78,16 +78,13 @@ const Navig = ({searchbtn}) => {
             <div className='auth'>
                 {
                     isAuthenticated ?
-                    <button onClick={logout}><CiLogout /></button>
+                    <button onClick={() => setAuthenticationStatus(false)}><CiLogout /></button>
                     :
-                    <button onClick={loginWithRedirect}><CiLogin /></button>
+                    <Link to="/login" className="auth-link"><CiLogin /></Link>
                 }                          
             </div>
         </div>
-    </div>
-
-
-
+    </div>         
     </>
   )
 }

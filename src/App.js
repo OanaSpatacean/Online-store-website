@@ -4,6 +4,9 @@ import Rout from './rout';
 import {BrowserRouter} from 'react-router-dom';
 import Footer from './footer';
 import Productdetail from './productdetail';
+import { EmailProvider } from './EmailContext';
+import { AuthProvider } from './AuthContext';
+import Login from './login'
 
 const App = () => {
   // add to cart
@@ -48,13 +51,27 @@ const App = () => {
   console.log(cart)
   return (
     <>
-    <BrowserRouter>
-    <Navig searchbtn={searchbtn}/>
-    <Rout product={product} setProduct={setProduct} detail={detail} view={view} close={close} setClose={setClose} cart={cart} setCart={setCart} addtocart={addtocart}/>
-    <Footer />
-    </BrowserRouter>
+      <AuthProvider>
+        <EmailProvider>
+          <BrowserRouter>
+            <Navig searchbtn={searchbtn} />
+            <Rout
+              product={product}
+              setProduct={setProduct}
+              detail={detail}
+              view={view}
+              close={close}
+              setClose={setClose}
+              cart={cart}
+              setCart={setCart}
+              addtocart={addtocart}
+            />
+            <Footer />
+          </BrowserRouter>
+        </EmailProvider>
+      </AuthProvider>
     </>
-  )
+  );
 }
 
 export default App

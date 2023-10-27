@@ -5,9 +5,12 @@ import { AiOutlineHeart, AiOutlineCloseCircle } from 'react-icons/ai';
 import { useAuth0 } from "@auth0/auth0-react";
 import Productdetail from './productdetail'
 import './product.css'
-const Product = ({product, setProduct, detail, view, close, setClose, addtocart}) => {
+import { useAuth } from './AuthContext';
+import { Link } from 'react-router-dom';
 
-    const { loginWithRedirect,isAuthenticated} = useAuth0();
+const Product = ({product, setProduct, detail, view, close, setClose, addtocart}) => {
+    const { isAuthenticated, setAuthenticationStatus } = useAuth();
+    
     const filtterproduct = (product) =>
     {
         const update = Productdetail.filter((x) => 
@@ -82,7 +85,7 @@ const Product = ({product, setProduct, detail, view, close, setClose, addtocart}
                                                 isAuthenticated ? 
                                                 <li onClick={() => addtocart (curElm)}><AiOutlineShoppingCart /></li>
                                                 :
-                                                <li onClick={() => loginWithRedirect()}><AiOutlineShoppingCart /></li>
+                                                <a href="/login"><AiOutlineShoppingCart /></a>
                                             }
                                             <li onClick={() => view (curElm)}><BsEye /></li>                                    
                                           </div>

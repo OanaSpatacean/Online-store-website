@@ -5,6 +5,11 @@
     font-family: Helvetica;
     box-sizing: border-box;
 }
+
+.login-container
+{
+    display: none;
+}
 .freeShipping
 {
     padding: 10x 30px;
@@ -143,4 +148,16 @@
     outline: none;
     border: none;
     background: none;
+}
+
+.header .container .auth .auth-link
+{
+    margin-right: 20px;
+    font-size: 22px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: none;
+    text-decoration: none; 
+    color: inherit; 
 }

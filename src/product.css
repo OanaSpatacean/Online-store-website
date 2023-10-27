@@ -116,7 +116,25 @@
     transition: 0.5s;
     font-size: 18px;
 }
+
+.products .container .productbox .contant .box .img_box .icon a
+{
+    list-style: none;
+    padding: 10px 10px;
+    color: #010f1c;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background: #fff;
+    transition: 0.5s;
+    font-size: 18px;
+}
 .products .container .productbox .contant .box .img_box .icon li:hover
+{
+    background: pink;
+    color: #fff;
+}
+
+.products .container .productbox .contant .box .img_box .icon a:hover
 {
     background: pink;
     color: #fff;
