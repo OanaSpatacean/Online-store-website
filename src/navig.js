@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-globals */
 import React, {useEffect} from 'react'
 import { FaShippingFast } from 'react-icons/fa';
 import { BsBagCheck } from 'react-icons/bs';
@@ -15,12 +16,12 @@ const Navig = ({searchbtn}) => {
     const [search, setSearch] = useState()
 
     const { isAuthenticated, setAuthenticationStatus } = useAuth();
-    const { email } = useEmail();  
+    const { email, setEmail } = useEmail();  
 
     return (
     <>
      <div className='login-container'> 
-        <Login />
+        <Login email={email}/>       
     </div>
     
     <div className='freeShipping'>
@@ -74,7 +75,7 @@ const Navig = ({searchbtn}) => {
                         { 
                             isAuthenticated && email === 'admin' && 
                             (
-                                <Link to='/admin' className='link'>Admin</Link>
+                                <Link to='/crud' className='link'>Admin</Link>
                             )
                         }
                     </li>
@@ -83,7 +84,7 @@ const Navig = ({searchbtn}) => {
             <div className='auth'>
                 {
                     isAuthenticated ?
-                    <button onClick={() => setAuthenticationStatus(false)}><CiLogout /></button>
+                    <button onClick={() => { setAuthenticationStatus(false); window.location.reload();}}><CiLogout /></button>
                     :
                     <Link to="/login" className="auth-link"><CiLogin /></Link>
                 }                          
@@ -221,3 +222,5 @@ const Navig = ({searchbtn}) => {
 
 export default Navig
 */
+
+/* eslint-enable no-restricted-globals */

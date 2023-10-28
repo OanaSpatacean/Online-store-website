@@ -9,6 +9,7 @@ import Login from './login'
 import { EmailProvider } from './EmailContext';
 import Navig from './navig'
 import Footer from './footer';
+import Crud from './crud';
 
 const Rout = ({product, setProduct, detail, view, close, setClose, cart, setCart, addtocart}) => {
   return (
@@ -21,6 +22,7 @@ const Rout = ({product, setProduct, detail, view, close, setClose, cart, setCart
           <Route path='/checkout' element={<Checkout />} />
           <Route path='/registration' element={<Registration />} />
           <Route path='/login' element={<Login />} />
+          <Route path='/crud' element={<Crud />} />
       </Routes>
     </EmailProvider>
     </>

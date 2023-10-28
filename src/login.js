@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import {db} from './firebase'
 import './registration.css'
 import {Link} from 'react-router-dom'
@@ -38,7 +38,7 @@ const Login = () => {
             if (emailArray.length > 0 && passwordArray.length > 0) 
             {     
                 setAuthenticationStatus(true);  
-                alert("Successfully logged in "+ email + "!");                            
+                alert("Successfully logged in "+ email + "!");                           
             } 
             else 
             {

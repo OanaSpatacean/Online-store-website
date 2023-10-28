@@ -6,7 +6,8 @@ export const useEmail = () => {
   return useContext(EmailContext);
 };
 
-export const useEmailValue = () => useContext(EmailContext).email;
+// Schimbă funcția useEmailValue pentru a include și funcția de setare a emailului
+export const useEmailValue = () => useContext(EmailContext);
 
 export const EmailProvider = ({ children }) => {
   const [email, setEmail] = useState('');
@@ -21,3 +22,4 @@ export const EmailProvider = ({ children }) => {
     </EmailContext.Provider>
   );
 };
+

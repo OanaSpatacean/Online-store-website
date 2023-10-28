@@ -6,6 +6,7 @@ import Footer from './footer';
 import Productdetail from './productdetail';
 import { EmailProvider } from './EmailContext';
 import { AuthProvider } from './AuthContext';
+import Crud from './crud';
 
 const App = () => {
   const [email, setEmail] = useState(''); 
