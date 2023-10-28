@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { FaShippingFast } from 'react-icons/fa';
 import { BsBagCheck } from 'react-icons/bs';
 import { AiOutlineUser } from 'react-icons/ai';
@@ -15,23 +15,21 @@ const Navig = ({searchbtn}) => {
     const [search, setSearch] = useState()
 
     const { isAuthenticated, setAuthenticationStatus } = useAuth();
-    const { email } = useEmail();
+    const { email } = useEmail();  
 
-  return (
+    return (
     <>
-    <div className='login-container'> {/* Apply a CSS class */}
-        <Login email={email} />
+     <div className='login-container'> 
+        <Login />
     </div>
     
     <div className='freeShipping'>
             <div className='truckIcon'>
             <FaShippingFast/>
             </div>
-        <p>Enjoy shipping at no cost for purchases over 300 RON.</p>
+            <p>Enjoy shipping at no cost for purchases over 300 RON.</p>
     </div>
-
-
-    <EmailProvider>  
+ 
     <div className="mainHeader"> 
         <div className='container'>
             <div className='logo'>
@@ -59,7 +57,6 @@ const Navig = ({searchbtn}) => {
             </div>
         </div>
     </div>
-    </EmailProvider>  
 
 
 
@@ -72,6 +69,14 @@ const Navig = ({searchbtn}) => {
                     </li>
                     <li>
                         <Link to='/product' className='link'>Product</Link>
+                    </li>
+                    <li className="admin">
+                        { 
+                            isAuthenticated && email === 'admin' && 
+                            (
+                                <Link to='/admin' className='link'>Admin</Link>
+                            )
+                        }
                     </li>
                 </ul>
             </div>           

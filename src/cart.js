@@ -2,10 +2,8 @@ import React from 'react'
 import { AiOutlineClose } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import './cart.css'
-import { useNavigate } from 'react-router-dom';
 
 const Cart = ({cart, setCart}) => {
-    const navigate = useNavigate();
     // increace qty
     const incqty = (product) => 
     {

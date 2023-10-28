@@ -1,6 +1,6 @@
 import React from 'react'
 import {db} from './firebase'
-//import './registration.css'
+import './registration.css'
 import {Link} from 'react-router-dom'
 import {getDocs, collection, where, query} from 'firebase/firestore'
 import { useState } from 'react'
@@ -38,7 +38,7 @@ const Login = () => {
             if (emailArray.length > 0 && passwordArray.length > 0) 
             {     
                 setAuthenticationStatus(true);  
-                alert("Successfully logged in!");                            
+                alert("Successfully logged in "+ email + "!");                            
             } 
             else 
             {
@@ -60,8 +60,8 @@ const Login = () => {
                 <div className='box'>
                     <input type='text' id='email' placeholder='E-mail' value={email} onChange={(e) => setEmail(e.target.value)}></input>
                     <input type='password' placeholder='Password' onChange={(e) => setPassword(e.target.value)}></input>
-                    <p>Don't have an account!<Link to='/registration'>Register</Link></p>                 
-                    <Link to='/' onClick={login}>Sign In</Link>               
+                    <p>Don't have an account? <Link to='/registration' className="reg-link">Register</Link></p>                 
+                    <Link to='/' className="home-link" onClick={login}>Sign In</Link>               
                 </div>
             </div>
         </div>

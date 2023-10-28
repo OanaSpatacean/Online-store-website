@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import {db} from './firebase'
-//import './registration.css'
+import './registration.css'
 import {Link} from 'react-router-dom'
 import {getDocs, addDoc, collection, where, query} from 'firebase/firestore'
 
@@ -45,9 +45,8 @@ const Registration = () => {
                     <input type='text' placeholder='Username' onChange={(e) => setName(e.target.value)}></input>
                     <input type='email' placeholder='E-mail' onChange={(e) => setEmail(e.target.value)}></input>
                     <input type='password' placeholder='Password' onChange={(e) => setPassword(e.target.value)}></input>
-                    <p>Already have an account!<Link to='/login'>Login</Link></p>
+                    <p>Already have an account! <Link to='/login' className="log-link">Login</Link></p>
                     <button onClick={register}>Sign Up</button>
-
                 </div>
             </div>
         </div>

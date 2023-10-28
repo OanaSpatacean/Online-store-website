@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import './checkout.css'
-import { useAuth0 } from "@auth0/auth0-react";
 import { BsFillBagCheckFill } from 'react-icons/bs';
+import { useAuth } from './AuthContext';
 
 const Checkout = () => {
-    const { loginWithRedirect, logout, user, isAuthenticated} = useAuth0();
+    const { isAuthenticated, setAuthenticationStatus } = useAuth();
     const [users, setUser] = useState(
         {
             Name: '', Adress: '', Phone: '', Number: '', Expire: '', CVV: ''
@@ -57,7 +57,7 @@ const Checkout = () => {
                     {
                         isAuthenticated ? 
                         <button type='submit' onClick={senddata}>Place order</button>
-                        : <button type='submit' onClick={() => loginWithRedirect()}>Login to Place Order</button>
+                        : <a type='submit' href="/login">Login to Place Order</a>
                     }
                 </form>
             </div>
