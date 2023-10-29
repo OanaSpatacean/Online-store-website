@@ -1,48 +1,46 @@
-.form-container
-{
-    background-color: white;
-    padding: 20px 30px;
-    margin: 0px auto;
-    width: 350px;
-    margin-top: 50px;
-}
-
 .form-container h2
 {
-    text-align: center;
     color: pink;
-    font-size: 16px;
+    font-size: 32px;
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 1px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 45px;
 }
 
-.form-container .box
+.form-container .box_FORM
 {
     width: 100%;
     margin-top: 10px;
 }
 
-.form-container .box input
+.form-container .box_FORM input
 {
-    width: 100%;
-    padding: 10px 0px;
-    border: none;
-    outline: none;
-    border-bottom: 1px solid #868686;
-}
-
-.form-container button
-{
-    margin-left: 20px;
     padding: 10px 30px;
     border: none;
     outline: none;
-    background: pink;
-    color: white;
+    background: none;
+    border-bottom: 1px solid #010f1c;
+    width: 350px;
     margin-top: 20px;
-    cursor: pointer;
+    margin-left: 5%;
 }
+.form-container button
+{
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    background: BLACK;
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    margin-left: 100px;
+    width: 90px;
+}
+
 
 .database
 {
@@ -52,11 +50,13 @@
 
 .database h2
 {
-    color: black;
-    font-size: 18px;
+    color: pink;
+    font-size: 32px;
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 1px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .database .container
@@ -81,7 +81,7 @@
     color: black;
 }
 
-.database .container .box button
+.database .box button
 {
     padding: 10px 20px;
     border: none;
@@ -89,6 +89,147 @@
     background: pink;
     color: white;
     margin-top: 15px;
+    margin-bottom: 15px;
     cursor: pointer;
     margin-left: 20px;
 }
+/*input
+{
+    padding: 10px 30px;
+    border: none;
+    outline: none;
+    background: none;
+    border-bottom: 1px solid #010f1c;
+    width: 500px;
+}
+h2
+{
+    color: pink;
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.box button
+{
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    background: pink;
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    margin-left: 20px;
+    width: 100px;
+}*/
+
+/*.form-container
+{
+    background-color: white;
+    padding: 20px 30px;
+    margin: 0px auto;
+    width: 350px;
+    margin-top: 50px;
+}
+
+.form-container h2
+{
+    text-align: center;
+    color: pink;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.form-container .box_FORM
+{
+    width: 100%;
+    margin-top: 10px;
+}
+
+.box_FORM input
+{
+    padding: 10px 30px;
+    border: none;
+    outline: none;
+    background: none;
+    border-bottom: 1px solid #010f1c;
+    width: 350px;
+    margin-top: 20px;
+    margin-left: 35%;
+}
+
+.form-container button
+{
+    margin-left: 20px;
+    padding: 10px 30px;
+    border: none;
+    outline: none;
+    background: pink;
+    color: white;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+.database
+{
+    padding: 20px 40px;
+    width: 100%;
+}
+
+h2
+{
+    color: pink;
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.container
+{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+.database .container .box
+{
+    padding: 10px 20px;
+    margin-top: 20px;
+    margin-left: 15px;
+    background: white;
+    border-radius: 5px;
+}
+
+.database .container .box h3
+{
+    margin-top: 10px;
+    font-size: 16px;
+    color: black;
+}
+
+.box button
+{
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    background: pink;
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    margin-left: 20px;
+}*/

@@ -43,7 +43,14 @@ const Product = ({product, setProduct, detail, view, close, setClose, addtocart}
                                 <h2>{curElm.Title}</h2>
                                 <p>Introducing our versatile and comfortable clothing item, designed to complement any occasion. This product is expertly crafted from high-quality materials, ensuring both style and comfort. With a wide range of sizes available, you can find the perfect fit for any body type. Whether you're dressing up for a special event or looking for an everyday favorite, this piece is the ideal choice for both fashion and ease...</p>
                                 <h3>{curElm.Price} RON</h3>
-                                <button>Add To Cart</button>
+                                <div className='icon'>
+                                {
+                                    isAuthenticated ? 
+                                    <button onClick={() => addtocart(curElm)}>Add To Cart</button>
+                                    :
+                                    <a href="/login"><button>Add To Cart</button></a>
+                                }       
+                                </div>
                             </div>
                         </div>
                     )

@@ -15,7 +15,7 @@ const Crud = () => {
 
     const add = async () =>
     {
-        const adddata = await addDoc(dbref, {id: id, Title: title, Cat: category, Price: price, Img: image});
+        const adddata = await addDoc(dbref, {Title: title, Cat: category, Price: price, Img: image});
 
         if(adddata)
         {
@@ -58,7 +58,7 @@ const Crud = () => {
         const updateref = doc(dbref, id);
         try 
         {
-            await updateDoc(updateref, {id: id, Title: title, Cat: category, Price: price, Img: image});
+            await updateDoc(updateref, {Title: title, Cat: category, Price: price, Img: image});
             alert("Data updated successfully!");
             window.location.reload();
         } 
@@ -85,29 +85,26 @@ const Crud = () => {
 
     return (
         <>
-        <div classname='form-container'>
+        <div class='form-container'>
             <h2>Add / Update Form</h2>
-            <div classname='box'>
-                <input type='text' placeholder='Id' autocomplete='Off' value={id} onChange={(e) => setId(e.target.value)}></input>
-            </div>
-            <div classname='box'>
+            <div class='box_FORM'>
                 <input type='text' placeholder='Title' autocomplete='Off' value={title} onChange={(e) => setTitle(e.target.value)}></input>
             </div>
-            <div classname='box'>
+            <div class='box_FORM'>
                 <input type='text' placeholder='Category' autocomplete='Off' value={category} onChange={(e) => setCategory(e.target.value)}></input>
             </div>
-            <div classname='box'>
+            <div class='box_FORM'>
                 <input type='text' placeholder='Price' autocomplete='Off' value={price} onChange={(e) => setPrice(e.target.value)}></input>
             </div>
-            <div classname='box'>
+            <div class='box_FORM'>
                 <input type='text' placeholder='Image URL' autocomplete='Off' value={image} onChange={(e) => setImage(e.target.value)}></input>
             </div>
             <button onClick={add}>Add</button>
             <button onClick={update}>Update</button>
         </div>
-        <div classname='database'>
+        <div class='database'>
             <h2>CRUD Database</h2>
-            <div className='container'>
+            <div class='container'>
                 {
                     fetchData.map((data) => {
                         return (
