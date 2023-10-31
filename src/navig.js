@@ -75,7 +75,23 @@ const Navig = ({searchbtn}) => {
                         { 
                             isAuthenticated && email === 'admin' && 
                             (
-                                <Link to='/crud' className='link'>Admin</Link>
+                                <Link to='/crudProducts' className='link'>Admin-Products</Link>
+                            )
+                        }
+                    </li>
+                    <li className="adminUsers">
+                        { 
+                            isAuthenticated && email === 'admin' && 
+                            (
+                                <Link to='/crudUsers' className='link'>Admin-Users</Link>
+                            )
+                        }
+                    </li>
+                    <li className="adminOrders">
+                        { 
+                            isAuthenticated && email === 'admin' && 
+                            (
+                                <Link to='/crudOrders' className='link'>Admin-Orders</Link>
                             )
                         }
                     </li>
@@ -86,7 +102,7 @@ const Navig = ({searchbtn}) => {
                     isAuthenticated ?
                     <button onClick={() => { setAuthenticationStatus(false); window.location.reload();}}><CiLogout /></button>
                     :
-                    <Link to="/login" className="auth-link"><CiLogin /></Link>
+                    <Link to="/login" className="auth-link" ><CiLogin /></Link>
                 }                          
             </div>
         </div>

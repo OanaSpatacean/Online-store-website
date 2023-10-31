@@ -3,7 +3,7 @@ import { db } from './firebase'
 import './crud.css'
 import {doc, addDoc, collection, deleteDoc, getDocs, setDoc, updateDoc} from 'firebase/firestore'
 
-const Crud = () => {
+const CrudProducts = () => {
     const [ id, setId ] = useState();
     const [ title, setTitle ] = useState();
     const [ category, setCategory ] = useState();
@@ -86,7 +86,7 @@ const Crud = () => {
     return (
         <>
         <div class='form-container'>
-            <h2>Add / Update Form</h2>
+            <h2>Add / Update Form for Products</h2>
             <div class='box_FORM'>
                 <input type='text' placeholder='Title' autocomplete='Off' value={title} onChange={(e) => setTitle(e.target.value)}></input>
             </div>
@@ -128,4 +128,4 @@ const Crud = () => {
     )
 }
 
-export default Crud
+export default CrudProducts

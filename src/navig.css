@@ -130,6 +130,13 @@
     color: black;
     transition: 0.5s;
 }
+
+.header .container .navig ul li .admin
+{
+    text-decoration: none;
+    color: black;
+    transition: 0.5s;
+}
 .header .container .navig ul li .link.hover
 {
     color: pink;
