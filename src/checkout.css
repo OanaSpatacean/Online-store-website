@@ -31,12 +31,12 @@
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-.checkout_container .contant .form form
+.checkout_container .contant .form 
 {
     display: flex;
     flex-direction: column;
 }
-.checkout_container .contant .form form input
+.checkout_container .contant .form input
 {
     padding: 10px 30px;
     border: none;
@@ -47,7 +47,7 @@
     margin-top: 20px;
     margin-left: 35%;
 }
-.checkout_container .contant .form form textarea
+.checkout_container .contant .form textarea
 {
     padding: 10px 30px;
     border: none;
@@ -59,7 +59,7 @@
     resize: none;
     margin-left: 35%;
 }
-.checkout_container .contant .form form button
+.checkout_container .contant .form button
 {
     margin-top: 30px;
     width: 100px;
