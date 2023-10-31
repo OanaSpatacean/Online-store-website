@@ -2,7 +2,7 @@ import React, {useEffect} from 'react'
 import {db} from './firebase'
 import './checkout.css'
 import {Link} from 'react-router-dom'
-import {getDocs, collection, where, query} from 'firebase/firestore'
+import {getDocs, collection, where, query, addDoc} from 'firebase/firestore'
 import { useState } from 'react'
 import { BsFillBagCheckFill } from 'react-icons/bs';
 import { useAuth } from './AuthContext';
@@ -50,13 +50,14 @@ const Checkout = () => {
 
             if (NameArray.length > 0 && AdressArray.length > 0 && PhoneArray.length > 0 && NumberArray.length > 0 && ExpireArray.length > 0 && CVVArray.length > 0) 
             {      
-                setOrderSent(true);
-                alert("Your order was sent!" + Name + Adress + Phone + Number + Expire + CVV);                           
+                setOrderSent(false);
+                alert("An error has occured, please check if any of the fields are empty!");                           
             } 
             else 
             {
-                setOrderSent(false);
-                alert("An error has occured, please check if any of the fields are empty!"+ Name + Adress + Phone + Number + Expire + CVV);
+                await addDoc(dbref, {Name: Name, Adress: Adress, Phone: Phone, Number: Number, Expire: Expire, CVV: CVV});
+                setOrderSent(true);
+                alert("Your order was sent!");
             }
         } 
         catch (error) 

@@ -21,7 +21,7 @@ const Registration = () => {
 
             if(emailMatchingArray.length > 0)
             {
-                alert("This E-mail Adress already exists!");
+                alert("This Email Adress already exists!");
             }
             else
             {
@@ -43,7 +43,7 @@ const Registration = () => {
                 <h2>Register</h2>
                 <div className='box'>
                     <input type='text' placeholder='Username' onChange={(e) => setName(e.target.value)}></input>
-                    <input type='email' placeholder='E-mail' onChange={(e) => setEmail(e.target.value)}></input>
+                    <input type='email' placeholder='Email' onChange={(e) => setEmail(e.target.value)}></input>
                     <input type='password' placeholder='Password' onChange={(e) => setPassword(e.target.value)}></input>
                     <p>Already have an account! <Link to='/login' className="log-link">Login</Link></p>
                     <button onClick={register}>Sign Up</button>
