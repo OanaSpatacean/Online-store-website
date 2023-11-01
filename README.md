@@ -47,8 +47,8 @@ Comenzile sunt stocate in baza de date Firebase.
 
 3.7. Sectiunea Admin:
 
-O sectiune speciala dedicata administrarii produselor, care este accesibila doar pentru contul de administrator.
-Administratorii pot adauga, sterge si actualiza produsele disponibile in magazin.
+O sectiune speciala dedicata administrarii produselor, a utilizatorilor si a comenzilor primite de la clienti, este accesibila doar pentru contul de administrator.
+Administratorii pot adauga, sterge si actualiza produsele disponibile in magazin, utilizatorii inregistrati si comenzile primite.
 
 4. Dependențe și Resurse Necesare:
 
